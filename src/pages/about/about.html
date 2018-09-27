@@ -7,162 +7,28 @@
 </ion-header>
 
 <ion-content class="cards-bg">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Recarregar" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
-  <ion-card>
-
-    <div>
-      <img src="assets/imgs/img1.png"/>
-    </div>
-
+  <ion-card *ngFor="let item of items">
+    <img [src]="item.url" />
     <ion-card-content>
       <ion-card-title>
-        Whey protein 100%
+        {{item.title}}
       </ion-card-title>
       <p>
-      Proteína concentrada 907 gramas.</p>
-      <p>
-      <b>INGREDIENTES:</b> Proteína concentrada do soro do leite, aroma idêntico ao natural e sucralose (edulcorante). Não contém glúten.
-      </p>
-      
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Integralmedica
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='md-cash'></ion-icon>
-          R$ 79,90
-        </button>
-      </ion-col>
-      <!-- <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col> -->
-    </ion-row>
-
-  </ion-card>
-
-   <ion-card>
-
-    <div>
-      <img src="assets/imgs/img2.png"/>
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        Creatina
-      </ion-card-title>
-      <p>
-      Creatina Hardcore Reload (300g) IntegralMedica. </p> 
-      <p><b> INGREDIENTES:</b> Creatina mono-hidratada.
+        {{item.body}}
       </p>
     </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Integralmedica
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='md-cash'></ion-icon>
-          R$ 29,90
-        </button>
-      </ion-col>
-      <!-- <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col> -->
-    </ion-row>
-
   </ion-card>
 
-  
- <ion-card>
-
-    <div>
-      <img src="assets/imgs/img3.png"/>
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        BCAA 2400
-      </ion-card-title>
-      <p>100 Cápsulas - Max Titanium</p>
-      <p> <b>INGREDIENTES: </b>L-Leucina, L-Valina, L-Isoleucina e cápsula (gelatina, água purificada). Não contém glúten.</p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Max
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='md-cash'></ion-icon>
-          R$ 35,00
-        </button>
-      </ion-col>
-      <!-- <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col> -->
-    </ion-row>
-
-  </ion-card>
-
-  <ion-card>
-
-    <div>
-      <img src="assets/imgs/img4.png"/>
-    </div>
-
-    <ion-card-content>
-      <ion-card-title>
-        Pasta de amendoim
-      </ion-card-title>
-      <p>
-      Pasta de amendoim integral
-      </p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Proteína pura
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='md-cash'></ion-icon>
-          R$ 19,90
-        </button>
-      </ion-col>
-      <!-- <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col> -->
-    </ion-row>
-
-  </ion-card>
-
+  <!-- <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
 
 </ion-content>

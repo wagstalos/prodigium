@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'page-about',
@@ -7,8 +9,38 @@ import { NavController } from 'ionic-angular';
 })
 export class AboutPage {
 
-  constructor(public navCtrl: NavController) {
+  data:Observable<any>;
+  items:any;
+  url:string;
 
+  constructor(public navCtrl: NavController, public http: HttpClient) {
+    this.url = 'https://wpsgames.com.br/app/prodigium/produtos';
+    this.getData();
+  }
+
+  getData(){
+    this.data = this.http.get(this.url)
+    this.data.subscribe(data => {
+      this.items = data;
+    });
+  }
+
+  // doInfinite(infiniteScroll) {
+  //   console.log('Begin async operation');
+  //   this.data = this.http.get(this.url)
+  //   this.data.subscribe(data => {
+  //     this.items = this.items.concat(data);
+  //     infiniteScroll.complete();
+  //   });  
+  // }
+
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+
+      this.data.subscribe(data => {
+       this.items = data;
+      refresher.complete();
+    });
   }
 
 }
