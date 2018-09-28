@@ -14,7 +14,7 @@ export class AboutPage {
   url:string;
 
   constructor(public navCtrl: NavController, public http: HttpClient) {
-    this.url = 'https://wpsgames.com.br/app/prodigium/produtos';
+    this.url = 'https://jsonplaceholder.typicode.com/photos?_limit=3';
     this.getData();
   }
 
