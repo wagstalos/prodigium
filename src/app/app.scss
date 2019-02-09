@@ -14,3 +14,10 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.tabs-md-dark .tab-button:hover:not(.disable-hover), .tabs-md-dark .tab-button[aria-selected=true], .tabs-md-dark .tab-button[aria-selected=true] .tab-button-icon {
+    color: #30EBBD;
+}
+.swiper-pagination-bullet-active {
+    background: #30EBBD;
+    opacity: 1;
+}
