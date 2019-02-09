@@ -1,9 +1,36 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title text-center>Home</ion-title>  
+  <button ion-button icon-only menuToggle>
+    <ion-icon name ="md-information-circle"></ion-icon>
+  </button>
   </ion-navbar>
-</ion-header> -->
-
+</ion-header>
+<ion-menu [content]="content" >
+    <ion-header color="dark">
+      <ion-toolbar color="dark">
+        <ion-title >Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="abrirPolitica()">
+         Politica de privacidade 
+        </button>
+        <!-- <button ion-item (click)="openPage(PoliticaPage)">
+          Friends
+        </button>
+        <button ion-item (click)="openPage(eventsPage)">
+          Events
+        </button>
+        <button ion-item (click)="closeMenu()">
+          Close Menu
+        </button> -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
 <!-- <ion-content padding>
   <div class="img-home"></div> <img src="assets/imgs/papeldeparede_prodigiumAzul.jpg" alt="imagem logo">
 </ion-content> -->
