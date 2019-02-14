@@ -1,12 +1,30 @@
 page-contact {
 	ion-content{
-		background: #232933 !important
+		background: #232933 !important;
 	}
 	.card-md-dark h2{
-		color:#2a2e34;
+		color: #30ebbd;
 	}
 	a{
 		text-decoration:none;
 	}
+	.item-md {
+		background-color: #232933!important;
+	}
+	.item-md p {
+		color: #bbbcbf;
+	}
+	.icon{
+		color: #bbbcbf;
+	}
+	a {
+		color: #fff;
+	}
+	.button-outline-md {
+		border-color: #30ebbd;
+
+	}
+	
+	
 }
 

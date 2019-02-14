@@ -3,13 +3,26 @@ page-dicas {
 		background: #232933 !important
     }
     h2{
-        color: #30edbf;
+        color: #30edbf!important;
+        font-weight: 600!important;
     }
     p{
         color: #737373;
     }
      ul li{
         color: #989898;
+    }
+    .card-title-md {
+        color: #30edbf!important;
+    }
+    .card-md p {
+        color: #fff;
+    }
+    ion-icon {
+        margin-right: 10px;
+    }
+    .content-md hr {
+        background-color: rgba(41, 237, 191,0.5);
     }
     .card-header-md {
         color: #30edbf!important;

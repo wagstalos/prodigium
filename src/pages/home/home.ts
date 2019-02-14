@@ -11,12 +11,16 @@ import { NavController } from 'ionic-angular';
 export class HomePage {
   //rootPage = HomePage;
   constructor(public navCtrl: NavController) {
-   
+
   }
-  abrirPolitica(){
+  abrirPolitica() {
     this.navCtrl.push(PoliticaPage);
   }
-  openPage(PoliticaPage){
-    this.navCtrl.push(PoliticaPage);
-  }
+  // openPage(PoliticaPage){
+  //   this.navCtrl.push(PoliticaPage);
+  // }
+  /*OpenUrl() {
+    window.open("http://google.com",'_system', 'location=yes');
+    browser.show()
+  }*/
 }
