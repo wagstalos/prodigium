@@ -1,4 +1,4 @@
-# Prodigium
+# Prodigium Aplicativo Ionic 3
 
 **22-09-2018
 Criação do App como os produtos sendo exportados via Json.
