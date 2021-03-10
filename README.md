@@ -5,6 +5,8 @@
 #Tecnologias usadas
 * Ionic 3
 * JSON
+* HTML
+* CSS
 
 
 ![alt text](https://wpsgames.com.br/sites/prodigium/img/logo1.png)
